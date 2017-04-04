@@ -1,0 +1,62 @@
+{
+	"simulationparameters": 
+	[
+		{
+		"simulationTimeStep": 0.1,
+		
+		"simulationRunTime": 1000.0,
+		
+		"gridSize": 
+		{
+			"row": 3,
+			"column": 4
+		},
+		"trafficPattern": "alternating",
+		
+		"carEntryRate": 
+		{
+			"min": 0.2,
+			"max": 2.5
+		},
+		"roadSegmentLength": 
+		{
+			"min": 200.0,
+			"max": 500.0
+		},
+		"intersectionLength": 
+		{
+			"min": 10.0,
+			"max": 15.0
+		},
+		"carLength": {
+			"min": 5.0,
+			"max": 10.0
+		},
+		"carMaximumVelocity": 
+		{
+			"min": 5.0,
+			"max": 9.0
+		},
+		"carStopDistance": 
+		{
+			"min": 0.5,
+			"max": 5.0
+		},
+		"carBrakeDistance": 
+		{
+			"min": 9.0,
+			"max": 10.0
+		},
+		"trafficLightGreenTime": 
+		{
+			"min": 30.0,
+			"max": 180.0
+		},
+		"trafficLightYellowTime": 
+		{
+			"min": 7.0,
+			"max": 15.0
+		}
+		}
+	]
+}
