@@ -1,0 +1,60 @@
+import java.util.Scanner;
+public class Main {
+	public static void main(String args[]) {
+		
+		Scanner stdin = new Scanner(System.in);
+		String input = "";
+		int side1 = 0;
+		int side2 = 0;
+		int side3 = 0;
+		int side4 = 0;
+		
+		
+		 while(stdin.hasNextLine())
+		    {
+			 try {
+				 
+				input = stdin.nextLine();
+			 
+		        String[] tokens = input.split(" ");
+		        side1 = Integer.parseInt(tokens[0]);
+		        side2 = Integer.parseInt(tokens[1]);
+		        side3 = Integer.parseInt(tokens[2]);
+		        side4 = Integer.parseInt(tokens[3]);
+		        
+		        if (side4 != 0)
+		        {
+		        	System.out.println("Too many numbers");
+		        }
+		        else if ((side1==side2) && (side2 == side3))
+		        {
+		        	System.out.println("Equilateral");
+		        }
+		        else if ((side1==side2 && side2!=side3 ) || (side1!=side2 && side3==side1) || (side3==side2 && side3!=side1))
+		        {
+		        	System.out.println("Isosceles");
+		        }
+		        else if ((side1 != side2) && (side2 != side3) && (side1 != side3))
+		        {
+		        	System.out.println("Scalene");
+		        }
+		        else
+		        {
+		        	System.out.println("Error");
+		        }
+		    }
+			 catch (NumberFormatException e)
+			 {
+			 System.out.println("NumberFormatException. Please use numbers");
+			 }
+			 catch (ArrayIndexOutOfBoundsException e)
+			 {
+				 System.out.println("ArrayIndexOutOfBoundsException. Too few numbers");
+			 }
+		    }
+		stdin.close();
+		
+	}
+	
+}
+

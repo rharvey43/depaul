@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete 4 elements from project &apos;TrafficSimulationUpdate&apos;&#x0D;&#x0A;- Original project: &apos;TrafficSimulationUpdate&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     model.swing.TranslatorEW.java&#x0D;&#x0A;     model.swing.TranslatorNS.java&#x0D;&#x0A;     model.swing.TranslatorSN.java&#x0D;&#x0A;     model.swing.TranslatorWE.java" description="Delete elements" element1="/src&lt;model.swing{TranslatorEW.java" element2="/src&lt;model.swing{TranslatorNS.java" element3="/src&lt;model.swing{TranslatorSN.java" element4="/src&lt;model.swing{TranslatorWE.java" elements="4" flags="589830" id="org.eclipse.jdt.ui.delete" resources="0" stamp="1479774656666" subPackages="false" version="1.0"/>
+</session>

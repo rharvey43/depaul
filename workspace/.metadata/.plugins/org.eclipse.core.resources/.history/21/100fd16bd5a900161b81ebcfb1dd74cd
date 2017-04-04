@@ -1,0 +1,26 @@
+/*
+ * Decompiled with CFR 0_118.
+ * 
+ * Could not load the following classes:
+ *  junit.framework.Assert
+ *  junit.framework.TestCase
+ */
+package project.model;
+
+import junit.framework.Assert;
+import junit.framework.TestCase;
+import project.model.Car;
+
+public class CarTest
+extends TestCase {
+    public CarTest(String name) {
+        super(name);
+    }
+
+    public void testCarCreation() {
+        Car c = new Car();
+        Assert.assertEquals((Object)0.0, (Object)c.getPosition());
+        Assert.assertEquals((Object)c.getVelocity(), (Object)(c.getPosition() + c.getVelocity()));
+    }
+}
+

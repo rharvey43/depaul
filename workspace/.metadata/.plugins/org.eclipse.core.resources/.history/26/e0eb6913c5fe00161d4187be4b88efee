@@ -1,0 +1,30 @@
+package assign6;
+
+import java.sql.*;
+
+public class FirstConnection 
+{
+	public static void main(String[] args) throws ClassNotFoundException, SQLException {
+		System.out.println("Creating connection to database...");
+		// Load the driver
+		Class.forName("oracle.jdbc.OracleDriver");
+		// Make the connection
+		// (You would of course use your own cdmoracle username and password)
+		Connection c = DriverManager.getConnection("jdbc:oracle:thin:@140.192.30.237:1521:def", "rharvey4", "cdm1188701");
+		// Close the connection
+		Statement s = c.createStatement();
+		System.out.println("Creating a table...");
+		// Drop any existing table and create the new table
+		s.executeUpdate("DROP TABLE STUDENT CASCADE CONSTRAINTS");
+		s.executeUpdate("CREATE TABLE STUDENT" +"(ID CHAR(4), Name VARCHAR2(20), PRIMARY KEY (ID))");
+		// Populate the table
+		
+		s.executeUpdate("INSERT INTO STUDENT VALUES('1234', " +"'Eric Schwabe')");
+		s.executeUpdate("INSERT INTO STUDENT VALUES('5678', " +"'Janine Spears')");
+		s.executeUpdate("INSERT INTO STUDENT VALUES('9901', " +"'Will Marrero')");
+		s.executeUpdate("INSERT INTO STUDENT VALUES('2222', " +"'Jane Huang')");
+		
+		c.close();
+		System.out.println("Done!");
+		}
+	}

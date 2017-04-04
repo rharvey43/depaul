@@ -1,0 +1,66 @@
+//Ron Harvey
+//SE 433 spring
+//4/3/17
+
+import java.util.Scanner;
+public class Main {
+	public static void main(String args[]) {
+		
+		Scanner stdin = new Scanner(System.in);
+		String input = "";
+		int side1 = 0;
+		int side2 = 0;
+		int side3 = 0;
+		int side4 = 0;
+		
+		
+		 while(stdin.hasNextLine())
+		    {
+			 try {
+				 
+				input = stdin.nextLine();
+			 
+		        String[] tokens = input.split(" ");
+		        side1 = Integer.parseInt(tokens[0]);
+		        side2 = Integer.parseInt(tokens[1]);
+		        side3 = Integer.parseInt(tokens[2]);
+		        if (side1 < 1 || side2 < 1 || side3 <1)
+		        {
+		        	System.out.println("Please use positive integers");
+		        }
+		        else if (tokens.length >= 4)
+		        {
+		        	System.out.println("Too many numbers");
+		        }
+		        else if ((side1==side2) && (side2 == side3))
+		        {
+		        	System.out.println("Equilateral");
+		        }
+		        else if ((side1==side2 && side2!=side3 ) || (side1!=side2 && side3==side1) || (side3==side2 && side3!=side1))
+		        {
+		        	System.out.println("Isosceles");
+		        }
+		        else if ((side1 != side2) && (side2 != side3) && (side1 != side3))
+		        {
+		        	System.out.println("Scalene");
+		        }
+		        else
+		        {
+		        	System.out.println("Error");
+		        }
+		    }
+			 catch (NumberFormatException e)
+			 {
+			 System.out.println("NumberFormatException. Please use integers");
+			 }
+			 catch (ArrayIndexOutOfBoundsException e)
+			 {
+				 System.out.println("ArrayIndexOutOfBoundsException. Too few numbers");
+			 }
+		    }
+		stdin.close();
+		
+	}
+	
+}
+
